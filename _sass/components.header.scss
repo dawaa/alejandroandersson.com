@@ -1,0 +1,46 @@
+.c-header {
+  position: relative;
+  min-height: $spacing-unit * 1.865;
+  border-top: 5px solid #ffd32a;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1em;
+  }
+
+  &__title {
+    @include relative-font-size(1.625);
+    font-weight: 300;
+    line-height: $base-line-height * $base-font-size * 2.25;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+
+    &,
+    &:visited {
+      color: #ebebeb;
+      text-decoration: none;
+    }
+  }
+
+
+  &__nav {
+    float: right;
+    line-height: $base-line-height * $base-font-size * 2.25;
+  }
+
+  &__nav-item {
+    color: #ffc107;
+    line-height: $base-line-height;
+
+    // Gaps between nav items, but not on the last one
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__nav-trigger, &__menu-icon {
+    display: none;
+  }
+}
+

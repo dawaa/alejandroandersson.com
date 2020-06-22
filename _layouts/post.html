@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<article class="c-article" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="c-article__header">
+    <h1 class="c-article__header-title" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="c-article__header-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {{ page.date | date: date_format }}
+      </time>
+      {%- if page.tags != empty -%}
+        &mdash;
+        {%- for tag in page.tags -%}
+        <span class="c-article__tag">
+          {{ tag }}
+        </span>
+        {%- endfor -%}
+      {%- endif -%}
+  </header>
+
+  <div class="c-article__content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>

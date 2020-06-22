@@ -1,0 +1,29 @@
+.c-article {
+  &__header-title {
+    margin-bottom: .25rem;
+  }
+
+  &__header-meta {
+    margin-top: 0;
+  }
+
+  &__tag {
+    margin-right: .5rem;
+    color: #ffd428;
+    background-color: #2f3e48;
+    cursor: pointer;
+    line-height: 24px;
+
+    &:nth-of-type(1) {
+      margin-left: .25rem;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__content {
+    line-height: 1.3;
+  }
+}

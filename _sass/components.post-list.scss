@@ -1,0 +1,12 @@
+.c-post-list {
+  padding: 0;
+  list-style: none;
+
+  &__item-title {
+    margin-bottom: 0;
+  }
+
+  &__item-date {
+    font-size: .95rem;
+  }
+}

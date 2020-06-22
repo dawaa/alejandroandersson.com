@@ -1,0 +1,39 @@
+.c-social-list {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    position: relative;
+    margin-right: 1em;
+
+    &:after {
+      content: ",";
+      position: absolute;
+      top: 0;
+      right: -5px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__item-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: .5em;
+    fill: #ebebeb;
+  }
+}
