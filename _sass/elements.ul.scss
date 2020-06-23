@@ -1,4 +1,10 @@
 ul {
+  padding-inline-start: 2em;
+
+  @include media-query(on-laptop) {
+    padding-inline-start: 2.5em;
+  }
+
   li {
     margin-bottom: .25rem;
   }

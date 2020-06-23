@@ -6,7 +6,11 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 0 1em;
+    padding: 0 .5rem;
+
+    @include media-query(on-tablet) {
+      padding: 0 1rem;
+    }
   }
 
   &__title {

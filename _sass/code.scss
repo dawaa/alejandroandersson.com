@@ -10,4 +10,9 @@ a .language-plaintext {
 
 .highlighter-rouge {
   line-height: 1;
+
+  pre {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
 }

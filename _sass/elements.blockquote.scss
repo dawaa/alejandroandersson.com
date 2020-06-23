@@ -1,4 +1,12 @@
 blockquote {
+  margin-inline-start: 1em;
+  margin-inline-end: 1em;
+
+  @include media-query(on-laptop) {
+    margin-inline-start: 2.5em;
+    margin-inline-end: 2.5em;
+  }
+
   p {
     padding: 1em;
     background-color: #192227;
