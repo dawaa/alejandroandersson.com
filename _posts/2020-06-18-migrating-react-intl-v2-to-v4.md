@@ -5,7 +5,7 @@ date:   2020-06-19 23:34:23 +0200
 categories: react
 tags: react react-intl
 ---
-I took the liberty upon myself to upgrade `react-intl` at work from `2.8.0` to the latest (as of writing) `4.6.9`. The journey of going through all the hoops wasn't all well documented, although they do have a guide on [migrating from v2 to v3](react-intl-v2-to-v3) but I found it not being enough, then we've got [migrating from v3 to v4](react-intl-v3-to-v4) which held better information though the change wasn't as big as going from v2 to v3.
+I took the liberty upon myself to upgrade `react-intl` at work from `2.8.0` to the latest (as of writing) `4.6.9`. The journey of going through all the hoops wasn't all well documented, although they do have a guide on [migrating from v2 to v3](https://formatjs.io/docs/react-intl/upgrade-guide-3x/) but I found it not being enough, then we've got [migrating from v3 to v4](https://formatjs.io/docs/react-intl/upgrade-guide-4x) which held better information though the change wasn't as big as going from v2 to v3.
 
 When upgrading I took one major version at a time, so rather than jumping from `2.x` straight to `4.x` I went from `2.x` to `3.x` to tackle the biggest changes first and later on see what the jump from `3.x` to `4.x` would entail.
 
@@ -43,11 +43,11 @@ Breaking changes:
 - `IntlProvider`'s default text component changed from `span` to `React.Fragment`
 - `FormattedRelative` renamed to `FormattedRelativeTime`
 - `formatRelative` renamed to `formatRelativeTime`
-- ... to name a few, rest can be read in the [migration guide from v2 to v3](react-intl-v2-to-v3)
+- ... to name a few, rest can be read in the [migration guide from v2 to v3](https://formatjs.io/docs/react-intl/upgrade-guide-3x/)
 
 #### Use full-icu
 
-Unless you want to compile Node.js with `full-icu` ([instructions here](compile-node-with-full-icu)), you could instead make use of the [`full-icu`](https://www.npmjs.com/package/full-icu) npm package, like so:
+Unless you want to compile Node.js with `full-icu` ([instructions here](https://nodejs.org/api/intl.html)), you could instead make use of the [`full-icu`](https://www.npmjs.com/package/full-icu) npm package, like so:
 
 ```bash
 # To initialize Node with the full-icu package
@@ -77,7 +77,7 @@ if (!Intl.RelativeTimeFormat) {
 #### Configure webpack
 
 Because we're using `webpack` to bundle our projects we had to make changes to our `webpack` config:
-- Per [their comment about using `webpack` and `babel-loader`](react-intl-v2-to-v3-compile-with-webpack), transpile the following packages, however only through our production config:
+- Per [their comment about using `webpack` and `babel-loader`](https://formatjs.io/docs/react-intl/upgrade-guide-3x/#webpack), transpile the following packages, however only through our production config:
 
     ```diff
    ...
@@ -342,8 +342,3 @@ Feel free to rename any occurrences of `FormattedHTMLMessage` to `FormattedMessa
 #### Finally
 
 It took me a while to figure everything out, perhaps I'm not the brightest either.. but I had to debug the source code of `react-intl` and related packages when something wouldn't play well or work at all. As the API documentation wouldn't fully go over what properties components could take or what arguments could be passed to helper functions and how that might alter the result.
-
-[react-intl-v2-to-v3]: https://formatjs.io/docs/react-intl/upgrade-guide-3x/
-[react-intl-v2-to-v3-compile-with-webpack]: https://formatjs.io/docs/react-intl/upgrade-guide-3x/#webpack
-[react-intl-v3-to-v4]: https://formatjs.io/docs/react-intl/upgrade-guide-4x
-[compile-node-with-full-icu]: https://nodejs.org/api/intl.html
