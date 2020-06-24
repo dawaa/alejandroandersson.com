@@ -28,6 +28,7 @@ url: "https://alejandroandersson.com" # the base hostname & protocol for your si
 github_username:  dawaa
 show_excerpts: true
 auto_ids: true
+google_analytics: 'UA-170461917-1'
 permalink: /:categories/:title
 
 # Build settings
