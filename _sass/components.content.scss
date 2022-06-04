@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 0 .5em;
 
-  @include media-query(on-laptop) {
+  @include media-query($on-laptop) {
     padding: 0;
   }
 }

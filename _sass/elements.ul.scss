@@ -1,7 +1,7 @@
 ul {
   padding-inline-start: 2em;
 
-  @include media-query(on-laptop) {
+  @include media-query($on-laptop) {
     padding-inline-start: 2.5em;
   }
 
