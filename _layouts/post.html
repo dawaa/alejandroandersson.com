@@ -13,9 +13,7 @@ layout: default
       {%- if page.tags != empty -%}
         &mdash;
         {%- for tag in page.tags -%}
-        <span class="c-article__tag">
-          {{ tag }}
-        </span>
+        <span class="c-article__tag">{{ tag }}</span>
         {%- endfor -%}
       {%- endif -%}
   </header>
