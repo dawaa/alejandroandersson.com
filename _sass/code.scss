@@ -9,6 +9,30 @@ a .language-plaintext {
 }
 
 .highlighter-rouge {
+  &:before {
+    position: absolute;
+    padding: 0 0.5em;
+    font-size: .65em;
+    text-transform: uppercase;
+    background-color: #2f3e48;
+  }
+
+  &.language-diff:before {
+    content: "diff";
+  }
+
+  &.language-bash:before {
+    content: "bash";
+  }
+
+  &.language-javascript:before {
+    content: "javascript";
+  }
+
+  &.language-typescript:before {
+    content: "typescript";
+  }
+
   pre {
     padding: .5em;
     overflow-x: auto;
