@@ -2,6 +2,10 @@
   padding: 0;
   list-style: none;
 
+  &__item {
+    margin-bottom: 3em;
+  }
+
   &__item-title {
     margin-bottom: 0;
   }
